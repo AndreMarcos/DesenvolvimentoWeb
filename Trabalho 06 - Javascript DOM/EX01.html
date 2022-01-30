@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>Trabalho 06 - André Marcos Ferreira</title>
+            <meta name="author" content="André Marcos Ferreira" />
+            <meta name="description" content="André Marcos Ferreira - 2020026106">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div>
+            <table class="table table-bordered table-strip">
+                <tr>
+                    <td id="livro">Livro</td>
+                    <td id="pagina">Páginas</td>
+                </tr>
+                <tr>
+                    <td id="livro"><a onclick="ClickLivro()">O Poder da Autorresponsabilidade</a></td>
+                    <td id="pagina"><a onclick="ClickPagina()">250</a></td>
+                </tr>
+                <tr>
+                    <td id="livro"><a onclick="ClickLivro()">A Garota do Lago</a></td>
+                    <td id="pagina"><a onclick="ClickPagina()">125</a></td>
+                </tr>
+                <tr>
+                    <td id="livro"><a onclick="ClickLivro()">As Crônicas De Nárnia - Volume Único</a></td>
+                    <td id="pagina"><a onclick="ClickPagina()">387</a></td>
+                </tr>
+                <tr>
+                    <td id="livro"><a onclick="ClickLivro()">21 Lições Para O Século 21</a></td>
+                    <td id="pagina"><a onclick="ClickPagina()">85</a></td>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript">
+            function ClickLivro(){
+                td = document.getElementsByTagName('td');
+                for(var i = 0; i < td.length; i++){
+                    td[i].style.background = "white";
+                    td[i].style.color = "black";
+                    if(td[i].id == "livro"){
+                        td[i].style.background = "blue";
+                        td[i].style.color = "white";
+                    }
+                }                
+            }
+
+            function ClickPagina(){
+                td = document.getElementsByTagName('td');
+                for(var i = 0; i < td.length; i++){
+                    td[i].style.background = "white";
+                    td[i].style.color = "black";
+                    if(td[i].id == "pagina"){
+                        td[i].style.background = "green";
+                        td[i].style.color = "white";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+.header{
+    background-color:teal;
+}
+
+.funcao{
+    color: white;
+    font-size: 20px;
+    margin-left: 450px;
+    padding-top: 90px;
+    font-family: Verdana;
+}
+
+.contato{
+    float: left;
+    background-color:teal;
+    width: 2px;
+    height: 100%;
+    position:fixed;
+    margin-top: -70px;
+    margin-left: 45px;
+}
+
+.contato-texto{
+    float: left;
+    font-style: oblique;
+    margin-left: 65px;
+    margin-top: 90px
+}
+
+.contato2{
+    float: left;
+    background-color:teal;
+    width: 2px;
+    height: 100%;
+    position:fixed;
+    margin-top: -70px;
+    margin-left: 400px;
+}
+
+.nome{
+    color: white;
+    font-size: 55px;
+    padding-left: 400px;
+    font-family: Verdana;
+    padding-top: 40px;
+}
+
+.foto-perfil{
+    border-radius: 50%;
+    width: 300px;
+    z-index: 1;
+    position:absolute;
+    float: left;
+    margin-left: 80px;
+    margin-top: 40px;
+    box-shadow: 10px 10px 25px darkgrey
+}
+
+.educacao{
+    margin-left: 500px;
+}
+
+.matricula{
+    color: red;
+    font-size: 10px;
+}
+
+.divisao-secao{
+    width: 1280px;
+}
+
+div{
+    margin: 0px;
+}
+
+body{
+    margin: 0px;
+    background:whitesmoke
+}

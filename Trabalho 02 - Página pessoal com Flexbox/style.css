@@ -1,0 +1,133 @@
+.foto-perfil{
+    border-radius: 50%;
+    width: 300px;
+    box-shadow: 10px 10px 25px darkgrey
+}
+
+body{
+    margin: 0px;
+    background:whitesmoke
+}
+
+
+
+
+.navbar {
+    overflow: hidden;
+    background-color: #2f3742;
+    display: flex;
+    justify-content: center;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background:white;
+    color: black;
+  }
+
+  .flex-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+
+  .titulo-secao{
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 40px;
+      margin-bottom: 60px;
+  }
+
+  .secao-inicio{
+      background-image: url(./backgroundinicio.jpg);
+      background-size: 3008px;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 328px
+  }
+
+  .secao-educacao{
+    background: rgb(50,53,58);
+    text-align:center;
+    color: white;
+    padding: 30px
+  }
+
+  .secao-experiencia{
+    background: rgb(50,53,58);
+    text-align:center;
+    color: white;
+    padding: 328px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .secao-interesses{
+    background: rgb(50,53,58);
+    padding: 328px;
+    text-align:center;
+    color: white;
+    padding: 328px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .secao-hobbies{
+    background: rgb(50,53,58);
+    padding: 328px;
+    text-align:center;
+    color: white;
+    padding: 328px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .h1-inicial{
+      color:white;
+  }
+
+  .p-inicial{
+      color:white;
+      font-size: 30px;
+  }
+
+  .p-inicio{
+      color:white;
+      font-size: 18px;
+  }
+
+  .text-white{
+      color:white;
+  }
+
+  .instituicao{
+      height: 400px;
+      border: 2px solid #2f3742;
+      border-radius: 20px;
+      width: 300px;
+      display: block;
+      text-align: center;
+      padding: 10px;
+      background-color: #2f3742;
+      color: white;
+      box-shadow: 10px 10px 25px darkgrey;  
+      margin-bottom: 40px;    
+  }
+
+  .img-instituicao{
+      padding-left: 10px;
+      float: left;
+  }

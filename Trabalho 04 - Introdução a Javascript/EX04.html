@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>Trabalho 04 - André Marcos Ferreira</title>
+            <meta name="author" content="André Marcos Ferreira" />
+            <meta name="description" content="André Marcos Ferreira - 2020026106">
+    </head>
+    <body>
+        <script type="text/javascript">
+           salarioatual = parseFloat(prompt("Informe o salário do funcionário"))
+           salarionovo = 0;
+           percentualaumento = 0;
+           valoraumento = 0;
+
+           if(salarioatual <= 280){
+               percentualaumento = 20;
+               salarionovo = salarioatual + (salarioatual*0.2)
+           }
+           if(salarioatual > 280.01 && salarioatual < 700){
+               percentualaumento = 15;
+               salarionovo = salarioatual + (salarioatual*0.15)
+           }
+           if(salarioatual > 700.01 && salarioatual < 1500){
+               percentualaumento = 10;
+               salarionovo = salarioatual + (salarioatual*0.1)
+           }
+           if(salarioatual > 1500.01){
+               percentualaumento = 5;
+               salarionovo = salarioatual + (salarioatual*0.05)
+           }
+           valoraumento = salarionovo - salarioatual;
+           document.write("O salário antigo: R$"+salarioatual+". Percentual de reajuste: "+percentualaumento+"%. Valor do aumento: R$"+valoraumento+". Novo salário: R$"+salarionovo)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,227 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>Trabalho 04 - André Marcos Ferreira</title>
+            <meta name="author" content="André Marcos Ferreira" />
+            <meta name="description" content="André Marcos Ferreira - 2020026106">
+    </head>
+    <body>
+        <script type="text/javascript">
+            anoatual = new Date().getFullYear()
+            mesatual = new Date().getMonth()
+            diatual = new Date().getDay();
+            horaatual = new Date().getHours();
+            minutosatual = new Date().getMinutes();
+            segundoatual = new Date().getSeconds();
+            anoIdade = 0;
+            mesIdade = 0;
+            diaIdade = 0;
+            horaIdade = 0;
+            minutosIdade = 0;
+            segundoIdade = 0;
+
+            dataString = prompt("Digite a data do seu nascimento no seguinte formato DD/MM/AAAA:");
+            horaString = prompt("Digite a hora e minuto do seu nascimento no seguinte formato HH:MM:");
+            segundo = parseInt(prompt("Digite o segundo de seu nascimento:"))
+            
+            dia = dataString.split('/')[0];
+            mes = dataString.split('/')[1];
+            ano = dataString.split('/')[2];
+            hora = horaString.split(':')[0];
+            minutos = horaString.split(':')[1];
+            
+            anoIdade = anoatual - ano;
+            
+            if(mes > mesatual){
+                anoIdade--;
+                anoIdade = mes - mesatual;
+                mesIdade = 12 - mesIdade;
+                if(dia > diatual){
+                    diaIdade = dia - diatual;
+                    diaIdade = 30 - diaIdade;
+                    if(hora > horaatual){
+                        horaIdade = hora - horaatual;
+                        horaIdade = 24 - horaIdade;
+                        if(minutos > minutosatual){
+                            minutosIdade = minutos - minutosatual;
+                            minutosIdade = 60 - minutosIdade;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }else{
+                            minutosIdade = minutosatual - minutos;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }
+                    }else{
+                        horaIdade = horaatual - hora;
+                        if(minutos > minutosatual){
+                            minutosIdade = minutos - minutosatual;
+                            minutosIdade = 60 - minutosIdade;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }else{
+                            minutosIdade = minutosatual - minutos;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }
+                    }
+                }else{
+                    diaIdade = diatual - dia;
+                    if(hora > horaatual){
+                        horaIdade = hora - horaatual;
+                        horaIdade = 24 - horaIdade;
+                        if(minutos > minutosatual){
+                            minutosIdade = minutos - minutosatual;
+                            minutosIdade = 60 - minutosIdade;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }else{
+                            minutosIdade = minutosatual - minutos;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }
+                    }else{
+                        horaIdade = horaatual - hora;
+                        if(minutos > minutosatual){
+                            minutosIdade = minutos - minutosatual;
+                            minutosIdade = 60 - minutosIdade;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }else{
+                            minutosIdade = minutosatual - minutos;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }
+                    }
+                }
+            }else{
+                mesIdade = mesatual - mes;
+                if(dia > diatual){
+                    diaIdade = dia - diatual;
+                    diaIdade = 30 - diaIdade;
+                    if(hora > horaatual){
+                        horaIdade = hora - horaatual;
+                        horaIdade = 24 - horaIdade;
+                        if(minutos > minutosatual){
+                            minutosIdade = minutos - minutosatual;
+                            minutosIdade = 60 - minutosIdade;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }else{
+                            minutosIdade = minutosatual - minutos;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }
+                    }else{
+                        horaIdade = horaatual - hora;
+                        if(minutos > minutosatual){
+                            minutosIdade = minutos - minutosatual;
+                            minutosIdade = 60 - minutosIdade;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }else{
+                            minutosIdade = minutosatual - minutos;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }
+                    }
+                }else{
+                    diaIdade = diatual - dia;
+                    if(hora > horaatual){
+                        horaIdade = hora - horaatual;
+                        horaIdade = 24 - horaIdade;
+                        if(minutos > minutosatual){
+                            minutosIdade = minutos - minutosatual;
+                            minutosIdade = 60 - minutosIdade;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }else{
+                            minutosIdade = minutosatual - minutos;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }
+                    }else{
+                        horaIdade = horaatual - hora;
+                        if(minutos > minutosatual){
+                            minutosIdade = minutos - minutosatual;
+                            minutosIdade = 60 - minutosIdade;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }else{
+                            minutosIdade = minutosatual - minutos;
+                            if(segundo > segundoatual){
+                                segundoIdade = segundo - segundoatual;
+                                segundoIdade = 60 - segundoIdade;
+                            }else{
+                                segundoIdade = segundoatual - segundo;
+                            }
+                        }
+                    }
+                }
+            }
+
+            document.write("Você tem "+anoIdade+" anos, "+mesIdade+" meses, "+diaIdade+" dias, "+minutosIdade+" minutos e "+segundoIdade+" segundos!")
+            
+        </script>
+    </body>
+</html>

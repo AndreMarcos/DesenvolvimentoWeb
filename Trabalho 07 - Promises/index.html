@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Trabalho 07 - André Marcos Ferreira</title>
+    <meta name="author" content="André Marcos Ferreira" />
+    <meta name="description" content="André Marcos Ferreira - 2020026106">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#inicio"><b>BUSCA DE CLIMA</b></a>
+    </div>
+    <div class="col-md-6" style="margin-top: 15px">
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Cidade</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Exemplo do tamanho do input"
+                aria-describedby="inputGroup-sizing-lg" id="cidade">
+            <button type="button" class="btn btn-blue btn-primary" onclick="BuscarClima()">Enviar</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+        function BuscarClima() {
+            cidade = document.getElementById('cidade').value;
+            console.log(cidade);
+            clima  = $.ajax({
+                type: "GET",
+                async: false,
+                url: 'https://api.openweathermap.org/data/2.5/weather?q=' + cidade +
+                    '&appid=2504be4e60d4f519994af2e578d426c5'
+            });
+            clima = JSON.parse(clima.responseText)
+            console.log(clima)
+            if(clima.cod == "404"){
+                alert("Cidade não encontrada")
+            }else{
+                temperatura = clima.main.temp/10;
+                maxima = clima.main.temp_max/10;
+                minima = clima.main.temp_min/10;
+                alert(cidade + ":\n - Condição atual é de " + clima.weather[0].description + "\n Temperatura atual: "+ temperatura + "\n Máxima: "+ maxima + "\n Mínima: " + minima)
+            }
+        }
+    </script>
+</body>
+
+</html>

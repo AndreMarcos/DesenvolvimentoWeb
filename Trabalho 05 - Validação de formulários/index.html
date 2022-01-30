@@ -1,0 +1,120 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Trabalho 05 - André Marcos Ferreira</title>
+  <meta name="author" content="André Marcos Ferreira" />
+  <meta name="description" content="André Marcos Ferreira - 2020026106">
+ </head>  
+    
+    <body bgcolor="#c8d8f8">
+        <form id="registraUsuario">
+            <center>
+                <table cellpadding=4 cellspacing=2 border=0>
+
+                    <th bgcolor="#CCCCFF" colspan=2>
+                        <font size=5>Registro de usuário</font>
+                    </th>
+
+                    <tr>
+                        <td valign=top> 
+                            <b>Nome</b> 
+                            <br>
+                            <input type="text" name="firstName" size=15></td>
+                        <td  valign=top>
+                            <b>Idade</b>
+                            <br>
+                            <input type="text" name="lastName" id="idade" size=15></td>
+                    </tr>
+
+                    <tr>
+                        <td valign=top colspan=2>
+                            <b>E-Mail</b> 
+                            <br>
+                            <input type="text" name="email" id="email" size=20>
+                            <br></td>
+                    </tr>
+
+                    <tr>
+                        <td  valign=top colspan=2>
+                            <b>Em quais linguagens você programa?</b>
+                            <br>
+                            <input type="checkbox" name="linguagens" id="check" onchange="ValidaCheckBox()" value="Java">Java&nbsp;&nbsp; 
+                            <input type="checkbox" name="linguagens" id="check" onchange="ValidaCheckBox()" value="C++">C++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" name="linguagens" id="check" onchange="ValidaCheckBox()" value="C">C<br>
+                            <input type="checkbox" name="linguagens" id="check" onchange="ValidaCheckBox()" value="Perl">Perl&nbsp;&nbsp;
+                            <input type="checkbox" name="linguagens" id="check" onchange="ValidaCheckBox()" value="COBOL">COBOL
+                            <input type="checkbox" name="linguagens" id="check" onchange="ValidaCheckBox()" value="VB">VB<br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td  valign=top colspan=2>
+                            <b>Com qual freqüência poderemos notificá-lo sobre novidades?</b>
+                            <br>
+                            <input type="radio" name="notify" value="Semanalmente" checked>Semanalmente&nbsp;&nbsp;
+                            <input type="radio" name="notify" value="Mensalmente">Mensalmente&nbsp;&nbsp; 
+                            <input type="radio" name="notify" value="Quinzenalmente">Quinzenalmente 
+                            <br></td>
+                    </tr>
+
+                    <tr>
+                        <td  align=center colspan=2>
+                            <input type="button" value="Submit" onclick="ValidarFormulario()"> 
+                        </td>
+                    </tr>
+
+                </table>
+            </center>
+        </form>
+        <script type="text/javascript">
+            function ValidarFormulario(){
+                var idade = document.getElementById('idade');
+                idade = parseFloat(idade.value);
+                var email = document.getElementById("email");
+                email = email.value;
+                if(!ValidaIdade(idade) == false){
+                    alert("A idade deve estar entre 10 e 90!!");
+                }
+                if(ValidaEmail(email) == false){
+                    alert("O e-mail não está no formato correto!!")
+                }
+                if(ValidaEmail(email) == true && ValidaIdade(idade.value) == true){
+                    alert("Formulário preenchido com sucesso!")
+                    location.reload();
+                }
+            }
+
+            function ValidaIdade(idade){
+                if(idade > 9 && idade < 91){
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+
+            function ValidaEmail(email){
+                if(email.search("@") == -1){
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+
+            function ValidaCheckBox(){
+                var input, selecionado = 0;
+                inputs = document.getElementsByTagName('input');
+                for(var i = 0; i < inputs.length; i++){
+                    if(inputs[i].type == 'checkbox'){
+                        if(inputs[i].checked == true && inputs[i].id == 'check'){
+                            selecionado++;
+                        }
+                        if(selecionado  > 3){
+                            inputs[i].checked = false;
+                        }
+                    }
+                }
+                return selecionado;
+            }
+        </script>
+    </body>
+</html>
